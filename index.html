@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rakhi Kumari — STEM Mentorship &amp; Career Guidance</title>
+  <meta name="description" content="Personal mentorship and STEM career guidance by Rakhi Kumari, SWE Emerging Global Leader. Independent coaching — not affiliated with any employer." />
+  <style>
+    :root {
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --text: #1a1f2a;
+      --muted: #5c6575;
+      --line: #e4e1da;
+      --accent: #1f4b7a;
+      --accent-soft: #e8f0f7;
+      --gold: #8a6d1d;
+      --gold-bg: #f5efdf;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      padding: 0.65rem 1.25rem;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 2.75rem 1.35rem 3.5rem; }
+    header {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.75rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 4px;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(26, 31, 42, 0.12);
+      background: var(--surface);
+    }
+    .eyebrow {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.45rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.45rem;
+    }
+    .tagline {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 36rem;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 0.9rem;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--gold-bg);
+      color: var(--gold);
+      border: 1px solid #e0d3ad;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.7rem;
+      letter-spacing: 0.02em;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.15rem;
+      margin-top: 1rem;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 0.9rem;
+    }
+    section { margin-bottom: 2.35rem; }
+    h2 {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      min-width: 8rem;
+    }
+    p { color: var(--muted); margin-bottom: 0.85rem; }
+    .lead { color: var(--text); font-size: 1.05rem; }
+    ul {
+      color: var(--muted);
+      padding-left: 1.15rem;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 0.95rem;
+    }
+    li { margin-bottom: 0.4rem; }
+    .grid {
+      display: grid;
+      gap: 0.9rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 1.35rem 1.4rem;
+      box-shadow: 0 2px 8px rgba(26, 31, 42, 0.04);
+    }
+    .card h3 {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 650;
+      margin-bottom: 0.25rem;
+      color: var(--text);
+    }
+    .meta {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 0.55rem;
+    }
+    .card p {
+      margin-bottom: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 0.93rem;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--line);
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+    .price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+    .skill {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #d2e0ed;
+      padding: 0.28rem 0.7rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .cta {
+      display: inline-block;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--accent);
+      color: #fff !important;
+      font-weight: 650;
+      padding: 0.8rem 1.35rem;
+      margin-top: 0.35rem;
+      text-decoration: none !important;
+      letter-spacing: 0.01em;
+    }
+    .cta:hover { background: #163960; }
+    .disclaimer {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--gold);
+      padding: 1rem 1.15rem;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+    .disclaimer strong { color: var(--text); }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    @media (max-width: 560px) {
+      header { grid-template-columns: 1fr; }
+      .photo { width: 112px; height: 112px; }
+      h1 { font-size: 1.65rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    Personal website for independent mentoring · Views and services are Rakhi’s own, not those of any employer or client organization
+  </div>
+  <div class="wrap">
+    <header>
+      <img class="photo" src="rakhi.jpg" alt="Rakhi Kumari" width="140" height="140" />
+      <div>
+        <div class="eyebrow">Independent mentor · Aurangabad, India</div>
+        <h1>Rakhi Kumari</h1>
+        <p class="tagline">Helping women and early-career professionals build careers in STEM, quality, and auditing — through practical, confidential 1:1 guidance.</p>
+        <div class="badge">SWE Emerging Global Leader Award</div>
+        <div class="links">
+          <a href="mailto:sarrafrakhi016@gmail.com">sarrafrakhi016@gmail.com</a>
+          <a href="https://www.linkedin.com/in/rakhi-kumari74" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p class="lead">
+        Quality professional with 6+ years of experience in customer quality, quality management systems,
+        product compliance, and operational excellence. ISO 9001 Lead Auditor (CQI &amp; IRCA), Lean Six Sigma
+        Green Belt, and Society of Women Engineers Global Ambassador.
+      </p>
+      <p>
+        Honored with the <strong>SWE Emerging Global Leader Award</strong> for contributions as a global leader
+        who creates a nurturing environment for women of different cultures in the workplace and demonstrates
+        leadership in professional organizations and the community.
+      </p>
+      <ul>
+        <li>B.Tech, Mechanical Engineering — Maulana Azad National Institute of Technology (MANIT), Bhopal</li>
+        <li>Experience mentoring Graduate Engineer Trainees and quality professionals</li>
+        <li>Focus: STEM entry paths, quality careers, and auditor skill-building</li>
+      </ul>
+      <div class="disclaimer">
+        <strong>Independence note:</strong> This site and all mentoring sessions are offered in a personal capacity.
+        They are not affiliated with, sponsored by, or endorsed by any current or past employer (including Caterpillar Inc.)
+        or client. Sessions do not use or share confidential employer information, and advice is educational career guidance only.
+      </div>
+    </section>
+
+    <section>
+      <h2>Sessions</h2>
+      <p>Book a private conversation. Sessions are general career coaching — not consulting on any employer’s products, processes, or internal systems.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>STEM career guidance</h3>
+          <p class="meta">45 minutes · Video call</p>
+          <p>Getting into STEM: role paths, resumes, interviews, and how to grow as a woman in engineering and related fields.</p>
+          <div class="row">
+            <span class="price">₹299</span>
+            <a href="mailto:sarrafrakhi016@gmail.com?subject=Book%20STEM%20career%20guidance">Book</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Quality &amp; auditing deep-dive</h3>
+          <p class="meta">60 minutes · Video call</p>
+          <p>General guidance on quality careers, ISO 9001 fundamentals, and building toward auditor / QMS roles — without employer-specific content.</p>
+          <div class="row">
+            <span class="price">₹1,499</span>
+            <a href="mailto:sarrafrakhi016@gmail.com?subject=Book%20quality%20%26%20auditing%20deep-dive">Book</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Ongoing mentorship</h3>
+          <p class="meta">4 × 45-minute sessions over 1–2 months</p>
+          <p>Structured personal coaching for career direction, interviews, and leadership goals, with light async check-ins between calls.</p>
+          <div class="row">
+            <span class="price">₹1,999</span>
+            <a href="mailto:sarrafrakhi016@gmail.com?subject=Book%20ongoing%20mentorship">Book</a>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:1.25rem">
+        <a class="cta" href="mailto:sarrafrakhi016@gmail.com?subject=Mentoring%20enquiry">Email to enquire</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Topics</h2>
+      <div class="skills">
+        <span class="skill">Women in STEM</span>
+        <span class="skill">Career guidance</span>
+        <span class="skill">Quality careers</span>
+        <span class="skill">ISO 9001 (general)</span>
+        <span class="skill">Interview prep</span>
+        <span class="skill">Leadership &amp; confidence</span>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Rakhi Kumari · Personal mentoring site · Not an official page of any employer
+    </footer>
+  </div>
+</body>
+</html>
